@@ -86,12 +86,20 @@ wedding-invitation/
 - **JSON**: Jackson Kotlin Module (Kotlin 데이터 클래스 직렬화)
 
 ## 데이터베이스 설정
-application.properties에 PostgreSQL 연결 정보를 추가해야 합니다:
+이 프로젝트는 Supabase PostgreSQL을 사용합니다.
+
+### 연결 정보
+- **Host**: aws-1-ap-northeast-2.pooler.supabase.com:5432
+- **Database**: postgres
+- **Username**: postgres.npgqwlvrvgwsjxwlcrvf
+
+### 프로파일 설정
+- **Local**: `application-local.properties`에 비밀번호 설정
+- **Production**: 환경 변수 `DATABASE_PASSWORD` 사용
+
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/wedding_invitation
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
+# application-local.properties (Git에서 제외됨)
+spring.datasource.password=your_supabase_password
 ```
 
 ## 개발 시 유의사항
