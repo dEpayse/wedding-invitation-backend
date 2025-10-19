@@ -1,0 +1,48 @@
+### 하객 관리 API 테스트
+
+### 1. 하객 등록 (신랑측, 참석)
+POST http://localhost:8080/api/v1/guests
+Content-Type: application/json
+
+{
+  "name": "홍길동",
+  "phoneLastDigits": "1234",
+  "side": "GROOM",
+  "willAttend": true,
+  "message": "결혼을 진심으로 축하합니다!"
+}
+
+### 2. 하객 등록 (신부측, 불참)
+POST http://localhost:8080/api/v1/guests
+Content-Type: application/json
+
+{
+  "name": "김영희",
+  "phoneLastDigits": "5678",
+  "side": "BRIDE",
+  "willAttend": false,
+  "message": "참석하지 못해 아쉽지만 축하합니다."
+}
+
+### 3. 하객 등록 (신랑측, 메시지 없음)
+POST http://localhost:8080/api/v1/guests
+Content-Type: application/json
+
+{
+  "name": "박철수",
+  "phoneLastDigits": "9999",
+  "side": "GROOM",
+  "willAttend": true
+}
+
+### 4. 하객 등록 (신부측, 참석)
+POST http://localhost:8080/api/v1/guests
+Content-Type: application/json
+
+{
+  "name": "이순신",
+  "phoneLastDigits": "7777",
+  "side": "BRIDE",
+  "willAttend": true,
+  "message": "행복하세요!"
+}
