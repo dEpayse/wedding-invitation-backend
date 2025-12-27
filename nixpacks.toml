@@ -1,2 +1,2 @@
 [start]
-cmd = "java -Dserver.port=$PORT $JAVA_OPTS -jar $(ls -1 build/libs/*jar | grep -v plain)"
+cmd = "java -Dserver.port=$PORT -jar build/libs/wedding-invitation-0.0.1-SNAPSHOT.jar"
