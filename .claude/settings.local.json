@@ -7,7 +7,12 @@
       "Bash(git restore:*)",
       "WebFetch(domain:docs.railway.app)",
       "WebFetch(domain:docs.railway.com)",
-      "WebFetch(domain:nixpacks.com)"
+      "WebFetch(domain:nixpacks.com)",
+      "Bash(./gradlew:*)",
+      "Bash(chmod:*)",
+      "WebFetch(domain:wedding-invitation-backend-production.up.railway.app)",
+      "Bash(curl:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
