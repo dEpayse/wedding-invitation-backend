@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git restore:*)",
+      "WebFetch(domain:docs.railway.app)",
+      "WebFetch(domain:docs.railway.com)",
+      "WebFetch(domain:nixpacks.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
