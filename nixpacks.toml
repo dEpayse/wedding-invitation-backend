@@ -1,14 +1,5 @@
 [phases.setup]
-nixPkgs = ["openjdk17", "gradle"]
-
-[phases.build]
-cmds = [
-  "export JAVA_HOME=$(dirname $(dirname $(which java)))",
-  "./gradlew clean build -x check -x test -Pproduction"
-]
-
-[start]
-cmd = "java -jar build/libs/*.jar"
+nixPkgs = ['...', 'openjdk17']
 
 [variables]
-JAVA_HOME = "/nix/store/*-openjdk-17*/lib/openjdk"
+NIXPACKS_JDK_VERSION = '17'
